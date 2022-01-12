@@ -11,8 +11,8 @@ A=[[4,0,0,0],[0,4,0,0],[0,0,4,0],[0,0,0,4]],
 B=[[0,4,0,0],[4,0,0,0],[0,0,4,0],[0,0,0,4]]
 ```
 
-The program runs separate computations even if matrices encode the surface.
-Removing this could seriously speed up the computation. But it is already fairly fast, so I did not bother.
+The program runs separate computations even if matrices encode the same surface.
+Removing this could speed up the computation. It is already fairly fast, so I did not bother.
 
 ## Requirements
 
@@ -29,7 +29,7 @@ A = np.array([[4,0,0,0],[0,4,0,0],[0,0,4,0],[0,0,0,4]])
 print(get_picard(A))
 ```
 
-Gives the output `20`, which is the Picard number of the K3 surface encoded by the matrix `A`.
+This gives the output `20`, which is the Picard number of the K3 surface encoded by the matrix `A`.
 This K3 surface is the Fermat quartic.
 
 Run `delsarte_picard_computation.py` to compute the Picard numbers of all smooth Delsarte K3 surfaces.
@@ -41,9 +41,15 @@ For example, the line
 
 ```2022-01-10 18:01:10,965 - shioda_picard_computation.py:182 - INFO - ID: 22536, rho=4, A=[array([0, 0, 0, 4]), array([1, 0, 3, 0]), array([0, 3, 1, 0]), array([3, 0, 0, 1])]```
 
-Means that the Delsarte surface encoded by the matrix
+means that the Delsarte surface encoded by the matrix
 
 ```[[0, 0, 0, 4], [1, 0, 3, 0], [0, 3, 1, 0], [3, 0, 0, 1]]```
 
 has Picard number 4, this is what the equation `rho=4` means.
 The lowest occuring Picard number is 4, the highest occuring Picard number is 20.
+
+## License
+
+  [<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />](http://creativecommons.org/publicdomain/zero/1.0/)
+  
+To the extent possible under law, Daniel Platt has waived all copyright and related or neighboring rights to Delsarte-K3-Picard-Numbers. This work is published from: United Kingdom.
